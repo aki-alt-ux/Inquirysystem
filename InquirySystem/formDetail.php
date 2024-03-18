@@ -10,17 +10,19 @@ session_start();
 //データベースプロセスファイルを読み込む
 require_once("dbprocess.php");
 
+//ユーザーアカウントを「login.php」より取得
+$username = $_SESSION["Administrator"];
+
+//管理者権限の判定
+if (isset($username)) {
+    $adminID = "管理者";
+}else {
+    $adminID = "一般ユーザー";
+}
+
+
 // メールの返信機能
 if (isset($_POST['message'])) {
-    //ユーザーアカウントを「login.php」より取得
-    $username = $_SESSION["Administrator"];
-
-    //管理者権限の判定
-    if (isset($username)) {
-        $adminID = "管理者";
-    }else {
-        $adminID = "一般ユーザー";
-    }
 
     $sql = "SELECT * FROM administrator WHERE AdminID = {$username['AdminID']}";
     $result = executeQuery($sql);
@@ -49,19 +51,6 @@ if (isset($_POST['message'])) {
     //結果保持用メモリを開放する
     mysqli_free_result($result);
 } else {
-    //ユーザーアカウントを「login.php」より取得
-    $username = $_SESSION["Administrator"];
-
-
-
-
-
-    //管理者権限の判定
-    if (isset($username)) {
-        $adminID = "管理者";
-    }else {
-        $adminID = "一般ユーザー";
-    }
 
     $inquiry_id = $_GET["inquiry_id"];
 
@@ -113,19 +102,27 @@ if (isset($_POST['message'])) {
     </style>
 	</head>
 	<body>
-	<div style="max-width: 950px;margin:0 auto">
-		<h1 align="center" style="margin-top: 21px;">お問合せ管理システム</h1>
-		<hr align="center" size="5" color="ORANGE" width="950"></hr>
-		<table align="center" width="850">
-			<tr>
-				 <td align="center"><font size="5">お問合せ内容詳細</font></td>
-				<p align="right"><font size="2">名前：<?=$username['Name'] ?></font></p>
-				<p align="right"><font size="2">権限：<?=$adminID ?></font></p>
-				<form action="login.php" method="POST">
-            　　<td><input type="submit" name="logout" value="ログアウト"></td>
-				</form>
-			</tr>
-		</table>
+	<div style="max-width: 950px; margin: 0 auto;">
+    <h1 align="center" style="margin-top: 21px;">お問合せ管理システム</h1>
+    <hr align="center" size="5" color="ORANGE" width="950">
+    <table align="center" width="850">
+        <tr>
+            <td colspan="2" align="center"><font size="5">お問合せ内容詳細</font></td>
+        </tr>
+        <tr>
+            <td width="50%" align="left"><font size="2">名前：<?=$username['Name'] ?></font></td>
+        </tr>
+        <tr>
+            <td width="50%" align="left"><font size="2">権限：<?=$adminID ?></font></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <form action="login.php" method="POST">
+                    <p align="right"><input type="submit" name="logout" value="ログアウト"></p>
+                </form>
+            </td>
+        </tr>
+    </table>
 		<hr align="center" size="2" color="black" width="950"></hr>
 		<br/>
 	<table>

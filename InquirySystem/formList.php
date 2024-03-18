@@ -37,19 +37,27 @@
 		<title>List</title>
 	</head>
 	<body>
-	<div style="max-width: 950px;margin:0 auto">
-		<h1 align="center" style="margin-top: 21px;">お問合せ管理システム</h1>
-		<hr align="center" size="5" color="ORANGE" width="950"></hr>
-		<table align="center" width="850">
-			<tr>
-				 <td align="center"><font size="5">お問合せ内容一覧</font></td>
-				<p align="right"><font size="2">名前：<?=$username['Name'] ?></font></p>
-				<p align="right"><font size="2">権限：<?=$adminID ?></font></p>
-				<form action="login.php" method="POST">
-            　　<td><input type="submit" name="logout" value="ログアウト"></td>
-				</form>
-			</tr>
-		</table>
+	<div style="max-width: 950px; margin: 0 auto;">
+    <h1 align="center" style="margin-top: 21px;">お問合せ管理システム</h1>
+    <hr align="center" size="5" color="ORANGE" width="950">
+    <table align="center" width="850">
+        <tr>
+            <td colspan="2" align="center"><font size="5">お問合せ内容一覧</font></td>
+        </tr>
+        <tr>
+            <td width="50%" align="left"><font size="2">名前：<?=$username['Name'] ?></font></td>
+        </tr>
+        <tr>
+            <td width="50%" align="left"><font size="2">権限：<?=$adminID ?></font></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <form action="login.php" method="POST">
+                    <p align="right"><input type="submit" name="logout" value="ログアウト"></p>
+                </form>
+            </td>
+        </tr>
+    </table>
 		<hr align="center" size="2" color="black" width="950"></hr>
 
 

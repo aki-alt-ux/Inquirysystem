@@ -12,7 +12,7 @@ session_start();
 require_once("dbprocess.php");
 
 //ログインボタンを押してアクセスされた場合の処理
-if (isset($_POST['user'])) {
+if (isset($_POST['login'])) {
 
     $user = $_POST['user'];
     $password = $_POST['password'];
@@ -37,6 +37,34 @@ if (isset($_POST['user'])) {
         exit(); // リダイレクト後にスクリプトの実行を終了する
     }
 }
+
+//新規管理者登録ボタンを押してアクセスされた場合の処理
+if (isset($_POST['new_user'])) {
+
+    $user = $_POST['user'];
+    $password = $_POST['password'];
+
+
+    //フォームに入力されたuserがすでに登録されていないかチェック
+    $sql = "SELECT * FROM Administrator WHERE AdminID = '{$user}' and password = '{$password}'";
+    $result = executeQuery($sql);
+
+    //結果データの判断
+    if (mysqli_num_rows($result) == 0) {
+        //データが存在しなかった場合エラー処理
+        header("Location: ./error.php?errMsg=ユーザー登録されていない為、新規管理者登録はできません。&path=login");
+
+    }else {
+        // データが存在する場合の処理
+        $userInfo = mysqli_fetch_assoc($result);
+        $_SESSION["Administrator"] = $userInfo;
+
+        // メニュー画面に遷移
+        header("location: ./registration.php");
+        exit(); // リダイレクト後にスクリプトの実行を終了する
+    }
+}
+
 
 //ログアウトボタンを押してアクセスされた場合の処理
 if (isset($_POST['logout'])) {
@@ -83,8 +111,6 @@ $msg = isset($_GET['Msg']) ? $_GET['Msg'] : "";
                 <input type="submit" name="login" value="ログイン">
             </td>
         </tr>
-        </form>
-        <form action="registration.php" method="POST">
         <tr>
             <td>
                 <input type="submit" name="new_user" value="新規管理者登録">
