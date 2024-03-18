@@ -1,0 +1,43 @@
+input[type="text"] {
+    font-family: "Meiryo", sans-serif;
+    background-color: lightgray;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+
+select {
+	font-family: "Meiryo", sans-serif;
+	font-size: 1em;
+	background-color: lightgray;
+	padding: 8px 10px;
+	border: 1px solid #ccc;
+	border-radius: 50px;
+}
+
+
+
+
+input[type="radio"] {
+  font-family: "Meiryo",sans-serif;
+  font-size: 10em;
+  color: red;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  vertical-align: -2px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+label {
+  color: lightgray;
+}
