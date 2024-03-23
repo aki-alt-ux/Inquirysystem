@@ -1,8 +1,14 @@
-var a = "晴れ";
-var b = "曇り";
-var c = "雨";
-document.write(a);
-document.write(b);
-document.write(c);
+//変数
+var percent = 10;
 
-document.write("明日の天気は" + a);
+//条件分岐
+if (percent < 20){
+  var wether = "晴れ";
+} else if (percent >= 20 && percent < 60){
+  var wether = "曇り";
+} else if (percent >= 60){
+  var wether = "雨";
+}
+
+//出力
+document.write("明日の天気は"　+ wether +"です。"
