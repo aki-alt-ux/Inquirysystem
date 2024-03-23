@@ -1,1 +1,8 @@
+var a = "晴れ";
+var b = "曇り";
+var c = "雨";
+document.write(a);
+document.write(b);
+document.write(c);
 
+document.write("明日の天気は" + a);
