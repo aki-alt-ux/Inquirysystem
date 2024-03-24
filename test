@@ -75,3 +75,18 @@ W：Will（意思確認）
 19	（付録4）Webデザインの原則	0	179	-	-
 20	（付録5）初心者がクラウドソーシングでWeb制作案件を獲得する方法	0	179	-	-
 21	チャレンジ問題	7	186	-	-
+
+
+
+
+<ul class="skill-list">
+  <li>web</li>
+  <li>イラスト</li>
+  <li>英語</li>
+</ul>  
+
+<ul class="skill">
+  <li>web</li>
+  <li>イラスト</li>
+  <li>英語</li>
+</ul>  
