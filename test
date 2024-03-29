@@ -134,3 +134,39 @@ div {
   border-width: 10px;
   box-sizing: border-box; /* ボックスの幅にpadding（余白）とborder（ボーダー）の幅を含む */
 }
+
+span,
+div {
+  width: 300px;
+  height: 100px;
+  margin-bottom: 10px;
+  border: 2px solid #000;
+}
+
+.block {
+  display: block; /* ブロックレベル要素にする */
+}
+
+.inline {
+  display: inline; /* インライン要素にする */
+}
+
+.inline-block {
+  display: inline-block; /* インラインブロック要素にする */
+}
+
+.none {
+  display: none; /* 非表示にする */
+}
+
+.content-box {
+  padding: 20px;
+  border-width: 10px;
+  box-sizing: content-box; /* ボックスの幅にpadding（余白）とborder（ボーダー）の幅を含まない */
+}
+
+.border-box {
+  padding: 20px;
+  border-width: 10px;
+  box-sizing: border-box; /* ボックスの幅にpadding（余白）とborder（ボーダー）の幅を含む */
+}
