@@ -47,6 +47,26 @@ O：Options（選択肢創出）
 　※夜早く寝る
 
 W：Will（意思確認）
+
+header {
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+  background-color: #F4769A;
+  border: 2px solid #000;
+}
+
+main {
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+  background-color: #FFE966;
+  border: 2px solid #000;
+}
+
+footer {
+  padding-bottom: 40px;
+  background-color: #2f92dd;
+  border: 2px solid #000;
+}
 　具体的には、「選択肢創出」で出したアイデアの中から、どれなら実践できそうか？
 　実践する場合、どのようなスケジュールで進めていくか？
   ※早起きし、活動する前に学習する
