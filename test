@@ -190,3 +190,14 @@ div {
   border-width: 10px;
   box-sizing: border-box; /* ボックスの幅にpadding（余白）とborder（ボーダー）の幅を含む */
 }
+
+.box1 {
+    width: 33%;
+    padding: 30px;
+    background-color: #4b20da;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
