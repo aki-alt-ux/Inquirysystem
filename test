@@ -248,3 +248,50 @@ div {
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ヘッダー　- ロゴ左配置</title>
+
+  <!-- CSSリセット-->
+  <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+  <!-- CSS-->
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <a href="#"><img
+      src="https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-sidejob-2/parts/logo-white.png"
+      alt="Kiramekicafe">
+    </a>
+    <nav class="header-nav">
+      <ul class="header-nav-list-group">
+        <li>
+          <a href="#">メニュー</a>
+        </li>
+        <li>
+          <a href="#">メニュー</a>
+        </li>
+        <li>
+          <a href="#">メニュー</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="header-button-group">
+      <li>
+        <a href="#" class="header-button">ボタン</a>
+      </li>
+      <li>
+        <a href="#" class="header-button">ボタン</a>
+      </li>
+    </ul>
+  </header>
+
+</body>
+</html>
