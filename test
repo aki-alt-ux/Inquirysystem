@@ -348,3 +348,59 @@ div {
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>タイトル</title>
+        <meta name="description" content="ページの説明">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+        <i class="bi bi-airplane-engines"></i>
+        <!--CSS-->
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+
+      <h1>タイトル</h1>
+      <p>テキスト</p>
+      <p class="important">テキストです</p>
+      <span class="important">テキストです</span>
+      <p id="important">テキストです</p>
+      <article>
+        <p>article > pの文章</p>
+      </article>
+      <h2>h2タイトルです</h2>
+      <p>h2に隣接したテキストです</p>
+      <a href="https://techacademy.jp">Techacademy</a>
+
+      <ul class="nth-child">
+        <li>リスト1</li>
+        <li>リスト2</li>
+        <li>リスト3</li>
+        <li>リスト4</li>
+        <li>リスト5</li>
+        <li>リスト6</li>
+        <li>リスト7</li>
+      </ul>
+
+      <ul class="odd-even">
+        <li>リスト1</li>
+        <li>リスト2</li>
+        <li>リスト3</li>
+        <li>リスト4</li>
+        <li>リスト5</li>
+      </ul>
+
+      <ul class="not">
+        <li>リスト１</li>
+        <li>リスト2</li>
+        <li>リスト3</li>
+        <li>リスト4</li>
+      </ul>
+
+      <p class="pseudo">p要素のテキスト</p>
+    </body>
+</html>
